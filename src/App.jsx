@@ -32,10 +32,21 @@ function App() {
       <h1 className="App-title">React - OpenAI Api</h1>
       <div className="App-image">
         {isLoading ? (
-          image == "" ? 
-            <SuperBalls className="loader" size={45} speed={1.4} color="white" />
-            :
-            <SuperBalls className="loader" size={120} speed={1} color="tomato" />
+          image == "" ? (
+            <SuperBalls
+              className="loader"
+              size={45}
+              speed={1.4}
+              color="white"
+            />
+          ) : (
+            <SuperBalls
+              className="loader"
+              size={120}
+              speed={1}
+              color="tomato"
+            />
+          )
         ) : (
           <div>
             <h3 className="image-title">{subtitle}</h3>
@@ -58,7 +69,9 @@ function App() {
       </form>
       <footer>
         <p>
-          <a href="http://www.juangavira.me">Developed by Juan Gavira {new Date().getFullYear()}</a>
+          <a href="https://github.com/JuanelopS/OpenAI-React">
+            Developed by Juan Gavira {new Date().getFullYear()}
+          </a>
           &nbsp; - &nbsp;
           <a href="https://openai.com/api/">OpenAI</a>
         </p>
