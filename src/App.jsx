@@ -16,28 +16,30 @@ function App() {
     e.preventDefault();
     generateImage(prompt)
       .then((response) => {
-        setIsLoading(true);
-        setImage(response);
-        setTimeout(() => {
-          setIsLoading(false);
-          setSubtitle(prompt);
-          form.reset();
+          setIsLoading(true);
+          setImage(response);
+          setTimeout(() => {
+              setIsLoading(false);
+              setSubtitle(prompt);
+              form.reset();
         }, 5000);
       })
       .catch((error) => console.log("Oops, something went wrong...", error));
   };
-
 
   return (
     <div className="App">
       <h1 className="App-title">React - OpenAI Api</h1>
       <div className="App-image">
         {isLoading ? (
-          <SuperBalls className="loader" size={45} speed={1.4} color="white" />
+          image == "" ? 
+            <SuperBalls className="loader" size={45} speed={1.4} color="white" />
+            :
+            <SuperBalls className="loader" size={120} speed={1} color="tomato" />
         ) : (
           <div>
             <h3 className="image-title">{subtitle}</h3>
-            <img className="image" src={image} alt={prompt} />
+            <img className="image" src={image} alt={prompt} loading="lazy" />
           </div>
         )}
       </div>
@@ -56,13 +58,9 @@ function App() {
       </form>
       <footer>
         <p>
-          <a>
-            Developed by Juan Gavira {new Date().getFullYear()}
-          </a>
+          <a href="http://www.juangavira.me">Developed by Juan Gavira {new Date().getFullYear()}</a>
           &nbsp; - &nbsp;
-          <a href="https://openai.com/api/">
-            OpenAI
-          </a>
+          <a href="https://openai.com/api/">OpenAI</a>
         </p>
       </footer>
     </div>
