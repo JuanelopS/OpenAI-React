@@ -1,6 +1,8 @@
 # OpenAI-React 🤖
 ## A little app developed in React by the use of openAI api.
 
+App running: https://openai-react.netlify.app/
+
 Instructions:
 
 You need create an account in https://openai.com/api/ and generate an api.
