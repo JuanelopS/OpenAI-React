@@ -25,7 +25,7 @@
 
 .image {
   border-radius: 3px;
-  align-self: center;
+  margin: 0 auto;
 }
 
 .App-input {
