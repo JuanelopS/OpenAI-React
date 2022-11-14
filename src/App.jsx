@@ -48,7 +48,7 @@ function App() {
             />
           )
         ) : (
-          <div>
+          <div className="image-container">
             <h3 className="image-title">{subtitle}</h3>
             <img className="image" src={image} alt={prompt} loading="lazy" />
           </div>
@@ -67,7 +67,7 @@ function App() {
         ></textarea>
         <input type="submit" className="App-button" value="Generate Image" />
       </form>
-      <footer>
+      <footer className="footer">
         <p>
           <a href="https://github.com/JuanelopS/OpenAI-React">
             Developed by Juan Gavira {new Date().getFullYear()}

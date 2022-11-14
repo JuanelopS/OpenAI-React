@@ -3,38 +3,43 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 80vh;
 }
 
 .App-title {
   text-align: center;
-  font-size: 2.6rem;
-  padding: 5px;
+  font-size: 2.3rem;
+  padding: 3px;
 }
 
 .App-image {
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
 }
 
 .image-title {
   text-align: center;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .image {
   border-radius: 3px;
-  margin: 0 auto;
 }
+
 
 .App-input {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.7rem;
   justify-content: center;
   align-items: center;
-  margin-top: 2.8rem;
+  margin-top: 2.4rem;
 }
 
 .App-textarea {
@@ -50,16 +55,19 @@
   font-size: 1.3rem;
 }
 
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+
 @media (max-width: 600px){
   .App-title {
     font-size: 2rem;
   }
 }
 
-a {
-  text-decoration: none;
-  color: lightblue;
-}
 
 
 
